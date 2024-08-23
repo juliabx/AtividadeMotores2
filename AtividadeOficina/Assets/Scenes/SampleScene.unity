@@ -2483,6 +2483,7 @@ GameObject:
   - component: {fileID: 770820739}
   - component: {fileID: 770820738}
   - component: {fileID: 770820737}
+  - component: {fileID: 770820742}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2504,6 +2505,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 7
   JumpForce: 5
+  isJumping: 0
+  doubleJump: 0
 --- !u!50 &770820738
 Rigidbody2D:
   serializedVersion: 4
@@ -2643,6 +2646,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &770820742
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770820736}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 692bb006c096b1940ad814c1c821a723, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &984523118
 GameObject:
   m_ObjectHideFlags: 0
@@ -2655,7 +2679,7 @@ GameObject:
   - component: {fileID: 984523121}
   - component: {fileID: 984523120}
   - component: {fileID: 984523122}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
