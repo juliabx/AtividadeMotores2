@@ -27,7 +27,6 @@ public class Apple : MonoBehaviour
 
             GameController.instance.totalScore += Score;
 
-
             Destroy(gameObject, 0.25f);
         }
     }
