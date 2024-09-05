@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 
     public float Speed;
     public float JumpForce;
+    
     private Rigidbody2D rig;
     private Animator anim;
 
