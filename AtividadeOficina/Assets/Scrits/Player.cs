@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 
     public float Speed;
     public float JumpForce;
+
     private Rigidbody2D rig;
     private Animator anim;
 
@@ -78,11 +79,20 @@ public class Player : MonoBehaviour
             isJumping = false;
             anim.SetBool("jump", false);
         }
+
+        if(collision.gameObject.tag == "Spike")
+        {
+            GameController.instance.ShowGameOver();
+            Destroy(gameObject);
+        }
     }
 
     
     void OnCollisionExit2D(Collision2D collision)
     {
-        isJumping = true;
+        if(collision.gameObject.layer == 8)
+        {
+            isJumping = true;
+        }
     }
 }
